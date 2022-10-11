@@ -12,6 +12,7 @@ Main doors: ACCESS_CAPTAIN 20
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	outfit = /datum/outfit/job/bos/
 	exp_type = EXP_TYPE_FALLOUT
+	maptype = "sunnyvale"
 
 	objectivesList = list("Leadership recommends the following goal for this week: Establish an outpost at the radio tower","Leadership recommends the following goal for this week: Acquire blueprints for research and preservation", "Leadership recommends the following goal for this week: Acquire or confiscate dangerous tech by any means necessary.")
 
@@ -141,7 +142,7 @@ Head Paladin
 	name = "Head Paladin"
 	jobtype = /datum/job/bos/f13sentinel
 	uniform = 		/obj/item/clothing/under/f13/recon
-	accessory = 	/obj/item/clothing/accessory/bos/sentinel
+	accessory = 	/obj/item/clothing/accessory/bos/headpaladin
 	glasses =       /obj/item/clothing/glasses/sunglasses
 	belt =			/obj/item/storage/belt/military/assault
 	mask =			/obj/item/clothing/mask/gas/sechailer
@@ -316,7 +317,7 @@ Head Knight
 	suit = 			/obj/item/clothing/suit/armor/f13/combat/brotherhood/captain
 	glasses =		/obj/item/clothing/glasses/night
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
-	accessory =		/obj/item/clothing/accessory/bos/knightcaptain
+	accessory =		/obj/item/clothing/accessory/bos/headknight
 	belt =			/obj/item/storage/belt/security/full
 	neck =			/obj/item/storage/belt/holster
 	mask =			/obj/item/clothing/mask/gas/sechailer
@@ -368,7 +369,7 @@ Star Paladin
 	selection_color = "#95a5a6"
 	exp_type = EXP_TYPE_BROTHERHOOD
 
-	exp_requirements = 1000 
+	exp_requirements = 1000
 
 	loadout_options = list(
 		/datum/outfit/loadout/spaladina, //5mm minigun

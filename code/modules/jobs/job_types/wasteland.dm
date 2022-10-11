@@ -1,118 +1,141 @@
 /datum/job/wasteland
 	department_flag = WASTELAND
+	maptype = "yuma"
 
 ////////////////
 // GREAT KHAN //
 ////////////////
 
 /datum/job/wasteland/f13pusher
-	title = "Great Khan"
+	title = "Viper"
 	flag = F13PUSHER
 	department_head = list("Captain")
 	head_announce = list("Security")
 	faction = FACTION_WASTELAND
-	total_positions = 8
-	spawn_positions = 8
-	description = "You are no common raider or tribal settler, for you are a Great Khan. Your ancestry is that of fierce warriors and noble chieftans, whose rites and sagas tell of blood soaked battlefields and great sacrifice for your tribe. At least, this was once the case: after the massacre at Bitter Springs by the NCR, your people have lost much of their strength - now you and many other Khans travel west of Vegas through Red Rock Canyon in the hopes of settling in the region of Yuma."
-	supervisors = "your gang leadership"
+	total_positions = 7
+	spawn_positions = 6
+	description =  "You are a Viper, a raider cult hailing from Vault 15. Your people were almost annihilated at the hands of the Brotherhood of Steel.  Despite its existence hanging from a thread; the Vipers persisted. You worship the Great Snake, preform your duties to it and venerate it.  As a gang you are also concerned with pillaging the surrounding area, setting up tolls, kidnapping and ransoming. If they can't pay, then they should be fed to the snakes; they do hunger as well."
+	supervisors = "the serpent priest"
 	selection_color = "#ff915e"
-	exp_requirements = 1000
 	exp_type = EXP_TYPE_FALLOUT
+	maptype = "yuma"
 
 	outfit = /datum/outfit/job/wasteland/f13pusher
 
-	access = list(ACCESS_KHAN)
-	minimal_access = list(ACCESS_KHAN)
+	access = null
+	minimal_access = null
 
-	loadout_options = list(
-		/datum/outfit/loadout/enforcer,
-		/datum/outfit/loadout/khanskirmisher,
-		/datum/outfit/loadout/khandrug,
-		)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
-			/datum/job/wasteland/f13raider,
 			/datum/job/wasteland/f13pusher,
 		),
 		/datum/matchmaking_pref/rival = list(
-			/datum/job/wasteland/f13raider,
 			/datum/job/wasteland/f13pusher,
 		),
 	)
 
 /datum/outfit/job/wasteland/f13pusher
-	name = "Great Khan"
+	name = "Viper"
 	jobtype = /datum/job/wasteland/f13pusher
-	suit = /obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket
-	id = /obj/item/card/id/khantattoo
-	ears = /obj/item/radio/headset/headset_khans
-	head = /obj/item/clothing/head/helmet/f13/khan
-	shoes = /obj/item/clothing/shoes/f13/military/khan
+	id = null
+	ears = null
+	gloves = /obj/item/clothing/gloves/f13/handwraps
 	backpack =	/obj/item/storage/backpack/satchel/explorer
 	satchel = 	/obj/item/storage/backpack/satchel/old
-	uniform = /obj/item/clothing/under/f13/khan
-	r_hand = /obj/item/book/granter/trait/selection
 	r_pocket = /obj/item/flashlight/flare
 	l_pocket = /obj/item/storage/survivalkit_khan
-	gloves = /obj/item/melee/unarmed/brass/spiked
-	box = null
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/jet = 2,
 		/obj/item/storage/bag/money/small/khan = 1
 		)
 
+/datum/outfit/job/wasteland/f13pusher/pre_equip(mob/living/carbon/human/H)
+	. = ..()
+	uniform = pick(
+		/obj/item/clothing/under/f13/merca,
+		/obj/item/clothing/under/f13/mercc,
+		/obj/item/clothing/under/f13/cowboyb,
+		/obj/item/clothing/under/f13/cowboyg,
+		/obj/item/clothing/under/f13/raider_leather,
+		/obj/item/clothing/under/f13/raiderrags,
+		/obj/item/clothing/under/pants/f13/ghoul,
+		/obj/item/clothing/under/jabroni)
 
-/datum/outfit/job/wasteland/f13pusher/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
+	shoes = pick(
+			/obj/item/clothing/shoes/jackboots,
+			/obj/item/clothing/shoes/f13/raidertreads,
+			/obj/item/clothing/shoes/f13/rag,
+			/obj/item/clothing/shoes/f13/explorer)
 
-	if(!H.gang)
-		var/datum/gang/greatkhans/GK = GLOB.greatkhans
-		GLOB.all_gangs |= GK
-		GK.add_member(H)
-		H.gang = GK
+	suit = pick(
+		/obj/item/clothing/suit/armor/f13/raider/supafly,
+		/obj/item/clothing/suit/armor/f13/raider/yankee,
+		/obj/item/clothing/suit/armor/f13/raider/blastmaster,
+		/obj/item/clothing/suit/armor/f13/raider/sadist,
+		/obj/item/clothing/suit/armor/f13/raider/badlands,
+		/obj/item/clothing/suit/armor/f13/raider/painspike)
 
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/den,)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/trail_carbine)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/varmintrifle)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combatrifle)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/uzi)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gate_khanate)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/jet)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/turbo)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/psycho)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
+	head = pick(
+		/obj/item/clothing/head/helmet/f13/raider/supafly,
+		/obj/item/clothing/head/helmet/f13/raider/yankee,
+		/obj/item/clothing/head/helmet/f13/raider/blastmaster,
+		/obj/item/clothing/head/helmet/f13/raider/arclight,
+		/obj/item/clothing/head/helmet/f13/fiend,
+		/obj/item/clothing/head/helmet/f13/raider/psychotic,
+		/obj/item/clothing/head/helmet/f13/raider/eyebot)
 
-/datum/outfit/loadout/enforcer
-	name = "Enforcer"
-	r_hand = /obj/item/twohanded/baseball/spiked
-	belt = /obj/item/storage/belt/bandolier
+	r_hand = pick(
+		/obj/item/storage/box/gunbox/vipers/set1,
+		/obj/item/storage/box/gunbox/vipers/set2,
+		/obj/item/storage/box/gunbox/vipers/set3,
+		/obj/item/storage/box/gunbox/vipers/set4,
+		/obj/item/storage/box/gunbox/vipers/set5,
+		/obj/item/storage/box/gunbox/vipers/set6)
+
+/datum/job/wasteland/f13serpentpriest
+	title = "Viper Serpent Priest"
+	flag = F13SERPENTPRIEST
+	faction = FACTION_WASTELAND
+	total_positions = 1
+	spawn_positions = 1
+	description =  "You are the spritual and military head of the vipers gang. While other bands of Vipers have lost their culture, you help to preserve the traditions of the Great Snakekeeper. All in the Viper tribe are subordinate to you, and your duties are to ensure the tribe prospers, and the old ways are kept."
+	supervisors = "the Great Snake"
+	selection_color = "#ff915e"
+	exp_type = EXP_TYPE_FALLOUT
+	exp_requirements = 200
+	maptype = "yuma"
+
+	outfit = /datum/outfit/job/wasteland/f13serpentpriest
+
+	access = null
+	minimal_access = null
+
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/wasteland/f13pusher,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/wasteland/f13pusher,
+		),
+	)
+
+/datum/outfit/job/wasteland/f13serpentpriest
+	name = "Viper Serpent Priest"
+	jobtype = /datum/job/wasteland/f13serpentpriest
+	id = null
+	uniform = /obj/item/clothing/under/f13/raider_leather
+	ears = null
+	suit = /obj/item/clothing/suit/hooded/robes/vipers
+	shoes = /obj/item/clothing/shoes/f13/rag
+	gloves = /obj/item/clothing/gloves/f13/handwraps
+	backpack =	/obj/item/storage/backpack/satchel/explorer
+	satchel = 	/obj/item/storage/backpack/satchel/old
+	r_hand = /obj/item/storage/box/gunbox/vipers/set5
+	r_pocket = /obj/item/flashlight/flare
+	l_pocket = /obj/item/storage/survivalkit_khan
 	backpack_contents = list(
-		/obj/item/restraints/legcuffs/bola/tactical=1,
-		/obj/item/book/granter/trait/bigleagues = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3
-		)
-
-/datum/outfit/loadout/khanskirmisher
-	name = "Skirmisher"
-	r_hand = /obj/item/gun/ballistic/automatic/smg/mini_uzi
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/uzim9mm = 3,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
-		/obj/item/storage/belt/holster = 1,
-		/obj/item/book/granter/trait/trekking = 1
-		)
-
-/datum/outfit/loadout/khandrug
-	name = "Drug Pusher"
-	belt = /obj/item/storage/belt/bandolier
-	backpack_contents = list(
-		/obj/item/book/granter/trait/midsurgery = 1,
-		/obj/item/book/granter/trait/chemistry = 1,
-		/obj/item/reagent_containers/pill/patch/turbo = 2
+		/obj/item/reagent_containers/pill/patch/jet = 2,
+		/obj/item/storage/bag/money/small/khan = 1
 		)
 
 /*
@@ -120,14 +143,14 @@ Raider
 */
 
 /datum/job/wasteland/f13raider
-	title = "Outlaw"
+	title = "Wasteland Raider"
 	flag = F13RAIDER
 	department_head = list("Captain")
 	head_announce = list("Security")
 	faction = FACTION_WASTELAND
 	social_faction = FACTION_RAIDERS
-	total_positions = 16
-	spawn_positions = 16
+	total_positions = -1
+	spawn_positions = -1
 	description = "You are an undesirable figure of some kind- perhaps a corrupt official, or a cannibalistic bartender, or a devious conman, to name a few examples. You have more freedom than anyone else in the wastes, and are not bound by the same moral code as others, but though you may only be interested in self-gain, you still have a responsibility to make your time here interesting, fun, and engaging for others- this means that whatever path you pursue should be more nuanced and flavorful than simple highway robbery or slavery. (Adminhelp if you require help setting up your character for the round.)"
 	supervisors = "Your desire to make things interesting and fun. Don't play this as wastelander+."
 	selection_color = "#ff4747"
@@ -255,7 +278,7 @@ Raider
 		/obj/item/storage/fancy/cigarettes/cigpack_cannabis = 1,
 		/obj/item/megaphone = 1,
 		/obj/item/radio/headset = 1,
-		/obj/item/book/granter/trait/bigleagues = 1,	
+		/obj/item/book/granter/trait/bigleagues = 1,
 		/obj/item/storage/pill_bottle/chem_tin/buffout = 1,
 		/obj/item/book/granter/trait/trekking = 1
 		)
@@ -267,7 +290,7 @@ Raider
 	backpack_contents = list(
 		/obj/item/kitchen/knife/butcher = 1,
 		/obj/item/book/granter/crafting_recipe/blueprint/trapper = 1,
-		/obj/item/radio/headset = 1,	
+		/obj/item/radio/headset = 1,
 		/obj/item/book/granter/trait/explosives = 1
 		)
 
@@ -311,7 +334,7 @@ Raider
 		/obj/item/ammo_box/shotgun/buck = 1,
 		/obj/item/ammo_box/shotgun/bean = 1,
 		/obj/item/melee/onehanded/club/fryingpan = 1,
-		/obj/item/radio/headset = 1,	
+		/obj/item/radio/headset = 1,
 		/obj/item/book/granter/trait/bigleagues = 1,
 		/obj/item/book/granter/trait/trekking = 1,
 		/obj/item/grenade/chem_grenade/cleaner = 2
@@ -337,6 +360,9 @@ Raider
 /datum/outfit/loadout/raider_ncr
 	name = "NCR Deserter"
 	suit = /obj/item/clothing/suit/armor/f13/exile/ncrexile
+	head = /obj/item/clothing/head/f13/ncr/standard/conscript
+	belt = /obj/item/storage/belt/military/assault/ncr
+	shoes = /obj/item/clothing/shoes/f13/military/ncr
 	uniform = /obj/item/clothing/under/f13/exile
 	id = /obj/item/card/id/rusted
 	backpack_contents = list(
@@ -351,6 +377,10 @@ Raider
 /datum/outfit/loadout/raider_legion
 	name = "Disgraced Legionnaire"
 	suit = /obj/item/clothing/suit/armor/f13/exile/legexile
+	belt = /obj/item/storage/belt/military/assault/legion
+	shoes = /obj/item/clothing/shoes/f13/military/legion
+	mask = /obj/item/clothing/mask/bandana/legion/legprime
+	head = /obj/item/clothing/head/helmet/f13/legion/prime
 	uniform = /obj/item/clothing/under/f13/exile/legion
 	id = /obj/item/card/id/rusted/rustedmedallion
 	backpack_contents = list(
@@ -455,7 +485,7 @@ Raider
 	total_positions = -1
 	spawn_positions = -1
 	description = "You arrive in Yuma Valley, hoping to escape your past, the war, or perhaps something worse. But you’ve seen the torchlight and heard the bark of the military officers. You haven’t escaped anything. Try to survive, establish your own settlement, make your own legend. Suffer well and die gladly."
-	supervisors = "God"
+	supervisors = "yourself"
 	selection_color = "#dddddd"
 
 	outfit = /datum/outfit/job/wasteland/f13wastelander
@@ -677,6 +707,7 @@ Raider
 	selection_color = "#ff4747"
 	exp_requirements = 600
 	exp_type = EXP_TYPE_WASTELAND
+	maptype = "yuma"	//Hopefully this makes Den not selectable outside of Yuma
 
 	outfit = /datum/outfit/job/wasteland/f13enforcer
 
@@ -749,6 +780,7 @@ Raider
 	selection_color = "#ff4747"
 	exp_requirements = 1000
 	exp_type = EXP_TYPE_OUTLAW
+	maptype = "yuma"	//Hopefully this makes Den not selectable outside of Yuma
 
 	outfit = /datum/outfit/job/wasteland/f13mobboss
 
@@ -816,13 +848,14 @@ datum/job/wasteland/f13dendoctor
 	flag = F13DENDOCTOR
 	faction = FACTION_WASTELAND
 	social_faction = FACTION_RAIDERS
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 2
+	spawn_positions = 2
 	description = "While you prioritize providing medical treatment in emergency situations, you are still trained in combat and have the additional role as a loyal combanteer to the Den."
 	supervisors = "The Boss."
 	selection_color = "#ff4747"
 	exp_requirements = 1000
 	exp_type = EXP_TYPE_OUTLAW
+	maptype = "yuma"	//Hopefully this makes Den not selectable outside of Yuma
 
 	outfit = /datum/outfit/job/wasteland/f13dendoctor
 
@@ -1018,6 +1051,7 @@ datum/job/wasteland/f13dendoctor
 	description = "You are a member of a tribe, far away from your homeland. Well, relatively far away. Whatever your reasons for coming here, you've found yourself pinned between the ongoing war of the NCR and Caesar's Legion. Try not to get shot."
 	supervisors = "the stars above"
 	selection_color = "#dddddd"
+	maptype = "yuma"
 	mapexclude = list("tribal")
 
 	outfit = /datum/outfit/job/wasteland/f13tribal
@@ -1029,6 +1063,7 @@ datum/job/wasteland/f13dendoctor
 	/datum/outfit/loadout/brawler,
 	/datum/outfit/loadout/spearman,
 	/datum/outfit/loadout/shaman,
+	/datum/outfit/loadout/greatkhan,
 	/datum/outfit/loadout/wayfarermelee,
 	/datum/outfit/loadout/wayfarerranged,
 	/datum/outfit/loadout/wayfarershaman,
@@ -1110,6 +1145,7 @@ datum/job/wasteland/f13dendoctor
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
+		/obj/item/warpaint_bowl = 1,
 		/obj/item/flashlight/lantern = 1
 		)
 
@@ -1149,6 +1185,19 @@ datum/job/wasteland/f13dendoctor
 		/obj/item/reagent_containers/pill/patch/healingpowder = 1,
 		/obj/item/book/granter/crafting_recipe/tribal = 1
 	)
+
+/datum/outfit/loadout/greatkhan
+	name = "Great Khan"
+	suit = /obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket
+	head = /obj/item/clothing/head/helmet/f13/khan
+	shoes = /obj/item/clothing/shoes/f13/military/khan
+	uniform = /obj/item/clothing/under/f13/khan
+	gloves = /obj/item/melee/unarmed/brass/spiked
+	backpack_contents = list(
+		/obj/item/reagent_containers/pill/patch/jet = 2,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
+		/obj/item/reagent_containers/pill/patch/turbo = 2,
+		)
 
 //White Legs
 /datum/outfit/loadout/whitelegsmelee

@@ -1,21 +1,35 @@
-## Rock Star
-Based and maintained from Citadel Station by way of Desert Rose, Fortune, Fortuna, Lone Star, and The Wasteland.
+## Brave New World
+Based and maintained from Citadel Station by way of Desert Rose, Fortune, Fortuna, Lone Star, The Wasteland, and Rock Star.
 
-[![CI Suite](https://isitmaintained.com/project/LoneStarF13/LoneStar/actions/workflows/ci_suite.yml/badge.svg?branch=master&event=push)](https://isitmaintained.com/project/LoneStarF13/LoneStar/actions/workflows/ci_suite.yml)
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/FortunaSS13/Fortuna.svg)](https://isitmaintained.com/project/LoneStarF13/LoneStar "Percentage of issues still open")
-[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/FortunaSS13/Fortuna.svg)](https://isitmaintained.com/project/LoneStarF13/LoneStar "Average time to resolve an issue")
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/fallout13/Fallout13.svg)](https://isitmaintained.com/project/fallout13/Fallout13 "Percentage of issues still open")
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/fallout13/Fallout13.svg)](http://isitmaintained.com/project/fallout13/Fallout13 "Average time to resolve an issue")
 
 [![forthebadge](http://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](https://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/pretty-risque.svg)](https://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](http://forthebadge.com) [![forinfinityandbyond](https://user-images.githubusercontent.com/5211576/29499758-4efff304-85e6-11e7-8267-62919c3688a9.gif)](https://www.reddit.com/r/SS13/comments/5oplxp/what_is_the_main_problem_with_byond_as_an_engine/dclbu1a)
 
+**Brave New World Information**  
+* **Code:** <https://github.com/fallout-13/Fallout13>
+* **Wiki:** <>
+* **Discord:** <https://discord.gg/5dsycCUb57>
+All relevant forum content takes place on the Discord!
+
 **The Wasteland Information**  
-* **Code:** <https://github.com/ogrigbe/thewasteland>
+* **Code:** <https://github.com/fortune13-ss13/thewasteland>
 * **Wiki:** <>
 * **Discord:** <https://discord.gg/2zPtbQK7zYxCgEwJTppx>
 All relevant forum content takes place on the Discord!
 
+**Lone Star Information**
+* **Code:** <https://github.com/LoneStarF13/LoneStar>
+
+**Fortuna Information**
+* **Code:** Deprecated
+
+**Fortune Information**
+* **Code:** Deprecated
+
 **Desert Rose Information**
-* **Code** <https://github.com/DesertRose2/desertrose>
-* **Legacy Code** <https://github.com/judgex/desertrose>
+* **Code:** <https://github.com/DesertRose2/desertrose>
+* **Legacy Code:** <https://github.com/judgex/desertrose>
 
 **Citadel Station Information**  
 * **Website:** <http://citadel-station.net>

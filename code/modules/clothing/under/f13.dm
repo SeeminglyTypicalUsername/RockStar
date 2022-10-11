@@ -648,6 +648,8 @@
 	item_state = "raiderrags"
 	item_color = "raiderrags"
 
+// Khan Uniforms Below
+
 /obj/item/clothing/under/f13/khan
 	name = "great khan uniform"
 	desc = "Clothing marking the wearer as one of the the Great Khans. Most common are denim pants."
@@ -657,9 +659,11 @@
 	item_state = "khan_uniform"
 	item_color = "khan_uniform"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 10, "fire" = 10, "acid" = 40)
+	body_parts_covered = GROIN|LEGS
+	fitted = NO_FEMALE_UNIFORM
 	var/uniformtoggled = FALSE
 
-/obj/item/clothing/under/f13/khan/shorts
+/obj/item/clothing/under/f13/khan/shorts //Skirt aswell, if you alt click on it, turns into khan skirt.
 	name = "great khan jorts"
 	desc = "Clothing marking the wearer as one of the the Great Khans. Most common are denim pants, but jorts is a acceptable alternative."
 	icon = 'icons/fallout/clothing/khans.dmi'
@@ -888,120 +892,6 @@
 	item_state = "bl_suit"
 	item_color = "enclave_o"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
-
-//Old World Militaries
-//US Army
-
-/obj/item/clothing/under/f13/army
-	name = "US Army combat uniform"
-	desc = "Standard issue combat uniform for the Army, worn by enlisted and NCOs."
-	icon = 'icons/fallout/clothing/uniforms.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
-	icon_state = "army_uniform"
-	item_state = "army_uniform"
-
-/obj/item/clothing/under/f13/army/officer
-	name = "US Army officer's combat uniform"
-	desc = "Standard issue combat uniform for the Army, worn by officers."
-	icon = 'icons/fallout/clothing/uniforms.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
-	icon_state = "army_officer"
-	item_state = "army_officer"
-
-/obj/item/clothing/under/f13/army/general
-	name = "US Army officer's combat uniform"
-	desc = "Standard issue combat uniform for the Army, worn by general rank officers."
-	icon = 'icons/fallout/clothing/uniforms.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
-	icon_state = "army_general"
-	item_state = "army_general"
-
-//US Navy
-
-/obj/item/clothing/under/f13/navy
-	name = "US Navy jumpsuit"
-	desc = "Pre-War standard naval uniform."
-	icon_state = "navy"
-	item_state = "bl_suit"
-	item_color = "navy"
-
-/obj/item/clothing/under/f13/navy/officer
-	name = "US Navy officer's jumpsuit"
-	desc = "Pre-War standard naval uniform for ranked officers."
-	icon_state = "navyofficer"
-	item_state = "bl_suit"
-	item_color = "navyofficer"
-
-//People's Liberation Army
-
-/obj/item/clothing/under/f13/chinese
-	name = "PLA uniform"
-	desc = "An pre-war People's Liberation Army uniform, worn by enlisted and NCOs."
-	icon = 'icons/fallout/clothing/uniforms.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
-	icon_state = "chinese_soldier"
-	item_state = "chinese_soldier"
-
-/obj/item/clothing/under/f13/chinese/officer
-	name = "PLA officer's uniform"
-	desc = "An pre-war People's Liberation Army uniform, worn by officers."
-	icon = 'icons/fallout/clothing/uniforms.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
-	icon_state = "chinese_officer"
-	item_state = "chinese_officer"
-
-//Old World Law Enforcement
-//Police and State Police
-
-/obj/item/clothing/under/f13/police/officer
-	name = "police officer's uniform"
-	desc = "A classic law enforcement uniform, composed of a dark navy long sleeve shirt, dark navy pants, and a black tie."
-	icon = 'icons/fallout/clothing/uniforms.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
-	icon_state = "police_officer"
-	item_state = "police_officer"
-
-/obj/item/clothing/under/f13/police/lieutenant
-	name = "police lieutenant's uniform"
-	desc = "A classic law enforcement uniform, composed of a dark navy long sleeve shirt, dark navy pants, and a black tie."
-	icon = 'icons/fallout/clothing/uniforms.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
-	icon_state = "police_lieutenant"
-	item_state = "police_lieutenant"
-
-/obj/item/clothing/under/f13/police/chief
-	name = "police chief's uniform"
-	desc = "A classic law enforcement uniform, composed of a dark navy long sleeve shirt, dark navy pants, and a black tie."
-	icon = 'icons/fallout/clothing/uniforms.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
-	icon_state = "police_chief"
-	item_state = "police_chief"
-
-/obj/item/clothing/under/f13/police/formal
-	name = "police formal uniform"
-	desc = "A formal police uniform."
-	icon = 'icons/fallout/clothing/uniforms.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
-	icon_state = "police_formal"
-	item_state = "police_formal"
-
-/obj/item/clothing/under/f13/police/trooper
-	name = "state police uniform"
-	desc = "The uniform of the State Police force, composed of a a gray long sleeve shirt, gray pants, and a black tie."
-	icon = 'icons/fallout/clothing/uniforms.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
-	icon_state = "state_trooper"
-	item_state = "state_trooper"
-
-//get a custom swat sprite at some point
-
-/obj/item/clothing/under/f13/police/swat
-	name = "SWAT officer uniform"
-	desc = "A US Army combat uniform, modified for SWAT team personnel."
-	icon = 'icons/fallout/clothing/uniforms.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
-	icon_state = "army_uniform"
-	item_state = "army_uniform"
 
 /obj/item/clothing/under/f13/machinist
 	name = "workman outfit"
@@ -1694,6 +1584,19 @@
 	icon_state = "masonduds"
 	item_state = "masonduds"
 
+/obj/item/clothing/under/f13/schlimmsuit
+	name = "foreign gentleman's attire"
+	desc = "A red paisley vest and silk cravat paired with beige slacks. These clothes are strangely antiquated for their time place."
+	icon_state = "schlimmsuit"
+	item_state = "schlimmsuit"
+
+/obj/item/clothing/under/f13/ahp_uniform
+	name = "highway patrol uniform"
+	desc = "An old tan police uniform with tight-fitting breeches and a gold badge with the logo of the 'Arizona State Troopers'."
+	icon_state = "ahp_uniform"
+	item_state = "ahp_uniform"
+	item_color = "ahp_uniform"
+
 //Super Mutants
 
 /obj/item/clothing/under/f13/mutieshorts
@@ -1730,7 +1633,7 @@
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
 
 /obj/item/clothing/under/f13/densuit
-	name = "the den outfit"
+	name = "mafioso outfit"
 	desc = "A dark grey, and finely pressed suit, complete with kneepads and a suspiciously golden silk shirt, only the best."
 	icon_state = "den_suit"
 	item_state = "den_suit"
@@ -1864,3 +1767,267 @@
 	desc = "Funny little tracksuit for a funny little man."
 	icon_state = "tracksuit"
 	item_state = "tracksuit"
+
+/// Custom items
+
+/obj/item/clothing/under/f13/blackdress/maus
+	name = "gothic lolita officer dress"
+	desc = "An eccentric dress that resembles a historic officer uniform."
+	icon_state = "mausgothlolidress"
+	item_state = "mausgothlolidress"
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = FALSE
+
+//Salvatores
+
+/obj/item/clothing/under/f13/salvatores/don
+	name = "don suit"
+	desc = "A white suit and tie, with a black undershirt."
+	icon_state = "salvatores_don"
+	item_state = "salvatores_don"
+
+/obj/item/clothing/under/f13/salvatores/officer
+	name = "officer suit"
+	desc = "A white suit and tie, with a black undershirt."
+	icon_state = "salvatores_officer"
+	item_state = "salvatores_officer"
+
+/obj/item/clothing/under/f13/salvatores/soldier
+	name = "salvatore family suit"
+	desc = "A white suit and tie, with a black undershirt."
+	icon_state = "salvatores_soldier"
+	item_state = "salvatores_soldier"
+
+//Mordinos
+
+/obj/item/clothing/under/f13/mordinos/boss
+	name = "stylish uuit"
+	desc = "A charcoal suit with a red shirt and black tie."
+	icon_state = "mordino_boss"
+	item_state = "mordino_boss"
+
+/obj/item/clothing/under/f13/mordinos/goon
+	name = "mordino family suit"
+	desc = "A black suit with a blue tie. Nice."
+	icon_state = "mordino_goon"
+	item_state = "mordino_goon"
+
+//Bishops
+
+/obj/item/clothing/under/f13/bishops/boss
+	name = "blue checkers"
+	desc = "Ay, dat's a nice suit ya got there. Be a shame if something were to happen to it."
+	icon_state = "bishop_boss"
+	item_state = "bishop_boss"
+
+/obj/item/clothing/under/f13/bishops/officer
+	name = "officer suit"
+	desc = "A navy blue suit with a light blue undershirt."
+	icon_state = "bishop_officer"
+	item_state = "bishop_officer"
+
+/obj/item/clothing/under/f13/bishops/soldier
+	name = "bishop family suit"
+	desc = "A light blue suit. Nice."
+	icon_state = "bishop_soldier"
+	item_state = "bishop_soldier"
+
+/obj/item/clothing/under/f13/bishops/casino_worker
+	name = "shark club uniform"
+	desc = "The standard uniform for workers at sharkclub"
+	icon_state = "bishop_casino_worker"
+	item_state = "bishop_casino_worker"
+
+//wrights
+
+/obj/item/clothing/under/f13/wrights/boss
+	name = "formal suit"
+	desc = "A neat, well maintained suit."
+	icon_state = "wright_boss"
+	item_state = "wright_boss"
+
+/obj/item/clothing/under/f13/wrights/officer
+	name = "wright officer suit"
+	desc = "A brown suit with a sense of formality to it."
+	icon_state = "wright_officer"
+	item_state = "wright_officer"
+
+/obj/item/clothing/under/f13/wrights/soldier
+	name = "wright family suit"
+	desc = "A suit with suspenders."
+	icon_state = "wright_soldier"
+	item_state = "wright_soldier"
+
+//hotel
+
+/obj/item/clothing/under/f13/hotel/concierge/uniform
+	name = "concierger uniform"
+	desc = "An old yellowish shirt with a black tie, intended for the hotel staff."
+	icon_state = "concierge_uniform"
+	item_state = "concierge_uniform"
+
+/obj/item/clothing/under/f13/hotel/concierge/uniform/skirt
+	name = "concierge skirt"
+	desc = "An old yellowish shirt with a black tie and a feminine skirt, intended for the hotel staff."
+	icon_state = "concierge_skirt"
+	item_state = "concierge_skirt"
+
+//religion
+
+/obj/item/clothing/under/f13/religion/priest
+	name = "priest clothing"
+	desc = "Typical priest clothing."
+	icon_state = "priest"
+	item_state = "priest"
+
+//civilian
+
+/obj/item/clothing/under/f13/hawaiian/red
+	name = "red hawaiian outfit"
+	desc = "Woooaahh, dude, party on."
+	icon_state = "hawaiianred_s"
+	item_state = "hawaiianred_s"
+
+/obj/item/clothing/under/f13/hawaiian/blue
+	name = "blue hawaiian outfit"
+	desc = "Woooaahh, dude, party on."
+	icon_state = "hawaiianblue_s"
+	item_state = "hawaiianblue_s"
+
+/obj/item/clothing/under/f13/hawaiian/orange
+	name = "orange hawaiian outfit"
+	desc = "Woooaahh, dude, party on."
+	icon_state = "hawaiianorange_s"
+	item_state = "hawaiianorange_s"
+
+/obj/item/clothing/under/f13/hawaiian/pink
+	name = "pink hawaiian outfit"
+	desc = "Woooaahh, dude, party on."
+	icon_state = "hawaiianpink_s"
+	item_state = "hawaiianpink_s"
+
+/obj/item/clothing/under/f13/ncr/police
+	name = "NCR police uniform"
+	desc = "A standard issue NCR police uniform, repurposed from the old world."
+	icon_state = "ahp_uniform"
+	item_state = "ahp_uniform"
+
+/obj/item/clothing/under/f13/brahminbaron/foreign_suit
+	name = "foreign suit"
+	desc = "A very well made suit."
+	icon_state = "schlimmsuit"
+	item_state = "schlimmsuit"
+
+//Old World Militaries
+//US Army
+
+/obj/item/clothing/under/f13/army
+	name = "US Army combat uniform"
+	desc = "Standard issue combat uniform for the Army, worn by enlisted and NCOs."
+	icon = 'icons/fallout/clothing/uniforms.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
+	icon_state = "army_uniform"
+	item_state = "army_uniform"
+
+/obj/item/clothing/under/f13/army/officer
+	name = "US Army officer's combat uniform"
+	desc = "Standard issue combat uniform for the Army, worn by officers."
+	icon = 'icons/fallout/clothing/uniforms.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
+	icon_state = "army_officer"
+	item_state = "army_officer"
+
+/obj/item/clothing/under/f13/army/general
+	name = "US Army officer's combat uniform"
+	desc = "Standard issue combat uniform for the Army, worn by general rank officers."
+	icon = 'icons/fallout/clothing/uniforms.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
+	icon_state = "army_general"
+	item_state = "army_general"
+
+//US Navy
+
+/obj/item/clothing/under/f13/navy
+	name = "US Navy jumpsuit"
+	desc = "Pre-War standard naval uniform."
+	icon_state = "navy"
+	item_state = "bl_suit"
+	item_color = "navy"
+
+/obj/item/clothing/under/f13/navy/officer
+	name = "US Navy officer's jumpsuit"
+	desc = "Pre-War standard naval uniform for ranked officers."
+	icon_state = "navyofficer"
+	item_state = "bl_suit"
+	item_color = "navyofficer"
+
+//People's Liberation Army
+
+/obj/item/clothing/under/f13/chinese
+	name = "PLA uniform"
+	desc = "An pre-war People's Liberation Army uniform, worn by enlisted and NCOs."
+	icon = 'icons/fallout/clothing/uniforms.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
+	icon_state = "chinese_uniform"
+	item_state = "chinese_uniform"
+
+/obj/item/clothing/under/f13/chinese/officer
+	name = "PLA officer's uniform"
+	desc = "An pre-war People's Liberation Army uniform, worn by officers."
+	icon = 'icons/fallout/clothing/uniforms.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
+	icon_state = "chinese_officer"
+	item_state = "chinese_officer"
+
+//Old World Law Enforcement
+//Police and State Police
+
+/obj/item/clothing/under/f13/police/officer
+	name = "police officer's uniform"
+	desc = "A classic law enforcement uniform, composed of a dark navy long sleeve shirt, dark navy pants, and a black tie."
+	icon = 'icons/fallout/clothing/uniforms.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
+	icon_state = "police_officer"
+	item_state = "police_officer"
+
+/obj/item/clothing/under/f13/police/lieutenant
+	name = "police lieutenant's uniform"
+	desc = "A classic law enforcement uniform, composed of a dark navy long sleeve shirt, dark navy pants, and a black tie."
+	icon = 'icons/fallout/clothing/uniforms.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
+	icon_state = "police_lieutenant"
+	item_state = "police_lieutenant"
+
+/obj/item/clothing/under/f13/police/chief
+	name = "police chief's uniform"
+	desc = "A classic law enforcement uniform, composed of a dark navy long sleeve shirt, dark navy pants, and a black tie."
+	icon = 'icons/fallout/clothing/uniforms.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
+	icon_state = "police_chief"
+	item_state = "police_chief"
+
+/obj/item/clothing/under/f13/police/formal
+	name = "police formal uniform"
+	desc = "A formal police uniform."
+	icon = 'icons/fallout/clothing/uniforms.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
+	icon_state = "police_formal"
+	item_state = "police_formal"
+
+/obj/item/clothing/under/f13/police/trooper
+	name = "state police uniform"
+	desc = "The uniform of the State Police force, composed of a a gray long sleeve shirt, gray pants, and a black tie."
+	icon = 'icons/fallout/clothing/uniforms.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
+	icon_state = "state_trooper"
+	item_state = "state_trooper"
+
+//get a custom swat sprite at some point
+
+/obj/item/clothing/under/f13/police/swat
+	name = "SWAT officer uniform"
+	desc = "A US Army combat uniform, modified for SWAT team personnel."
+	icon = 'icons/fallout/clothing/uniforms.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
+	icon_state = "army_uniform"
+	item_state = "army_uniform"
